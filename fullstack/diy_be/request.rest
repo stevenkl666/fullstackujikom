@@ -1,0 +1,67 @@
+GET http://localhost:3100/admin/
+Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoxLCJuYW1hIjoiSmlkYW4iLCJlbWFpbCI6IkppZGFuQGdtYWlsLmNvbSIsImlhdCI6MTczOTA3NTA5NCwiZXhwIjoxNzM5MTYxNDk0fQ.b7tMkiC-oBBLnQ-wm01XdVpbPDaoSp_uSXfU-b6-3JQ
+
+###
+GET http://localhost:3100/admin/find/1
+Authorization : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoxLCJuYW1hIjoiSmlkYW4iLCJlbWFpbCI6IkppZGFuQGdtYWlsLmNvbSIsImlhdCI6MTczOTA3NTA5NCwiZXhwIjoxNzM5MTYxNDk0fQ.b7tMkiC-oBBLnQ-wm01XdVpbPDaoSp_uSXfU-b6-3JQ
+
+
+###
+DELETE  http://localhost:3100/pembeli/delete/1
+###
+POST http://localhost:3100/admin/register
+Content-Type: application/json
+
+ {
+"nama":"Jidan",
+"email": "Jidan@gmail.com",
+"password": "kominfo223"
+ }
+
+###
+POST http://localhost:3100/admin/login
+Content-Type: application/json
+
+ {
+"tanggal_pembelian": "2024-10-1",
+"total_harga": 300,
+"status":true
+ }
+
+
+
+###
+DELETE http://localhost:3100/admin/delete/1
+
+
+
+//! Pembeli
+
+###
+POST http://localhost:3100/transaksi/create
+Content-Type: application/json
+
+ {
+"tanggal_pembelian": "2024-10-1",
+"total_harga": 300,
+"status":true,
+"CartId":1,
+"PembeliId":1
+ }
+
+###
+PUT http://localhost:3100/transaksi/update/2
+Content-Type: application/json
+
+ {
+"tanggal_pembelian": "2024-10-1",
+"total_harga": 300,
+"status":true,
+"CartId":1,
+"PembeliId":2
+ }
+###
+GET http://localhost:3100/transaksi/
+
+###
+DELETE http://localhost:3100/transaksi/delete/2

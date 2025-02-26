@@ -1,0 +1,13 @@
+/* .background-image {
+    width: 100%;
+    background-color: #DCD7FE; 
+    background-image: url(./images/jakarta.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+   */
+
+.background-image{
+  background-color: white;
+}
